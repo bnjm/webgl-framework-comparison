@@ -20,30 +20,23 @@
 			min-height: 100%;
 			background: rgba(230,230,200,0.9);
 		}
-/*		canvas {
+		#goo-canvas {
 			position: absolute;
-			width: 100%;
-		}*/
-canvas {
-    position: absolute;
-    top: 0;
-    left: 33%;
-    width: 33%;
-    height: 100%;
-}
+			width: calc(100% / 3);
+			height: 100%;
+		}
 	</style>
 </head>
 <body>
-<section class="three">	
-</section>
 <section class="goo">
 	<canvas id="goo-canvas"></canvas>
+</section>
+<section class="three">	
 </section>
 <section class="play">
 	<canvas id="application-canvas"></canvas>
 </section>	
-	<script src="../require.js"></script>
-	<script src="../goo/goo.js"></script>
+	<script src="http://code.gooengine.com/0.8.1/lib/goo.js"></script>
 	<script src="../play/playcanvas-latest.min.js"></script>
 	<script src="../three/three.min.js"></script>
 	<script src="../play/play-cube.js"></script>
