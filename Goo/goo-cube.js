@@ -11,16 +11,11 @@
 
 	
 	var gooRunner = new goo.GooRunner({canvas: canvas});
-	gooRunner.renderer.context.canvas.clientHeight = window.innerHeight;
-	gooRunner.renderer.domElement.clientHeight = window.innerHeight;
-	gooRunner.world.gooRunner.renderer.domElement.clientHeight = window.innerHeight;
-	canvas.height = window.innerHeight;
-	canvas.width  = gooParent.clientWidth;
 	var world = gooRunner.world;
 	world.createEntity(new goo.PointLight(), [100, 100, 100])
 		.addToWorld();
 
-	world.createEntity(new goo.Camera(), new goo.OrbitCamControlScript({spherical: [5,0,0]}))
+	world.createEntity(new goo.Camera(), new goo.OrbitCamControlScript({spherical: [10,10,10]}))
 		.addToWorld();
 	world.createEntity(new goo.Box(), goo.Material.createMaterial(goo.ShaderLib.simpleLit), function (entity) {
 	    entity.setRotation(world.time, world.time, 0);
