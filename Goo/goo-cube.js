@@ -1,7 +1,7 @@
-// // (function(){
+// (function(){
 
 // 	var canvas    = document.querySelector('#goo-canvas');
-	var gooParent = document.querySelector('.goo');
+// 	var gooParent = document.querySelector('.goo');
 
 // 	gooParent.clientWidth = window.innerWidth / 4;
 // 	gooParent.clientHeight = window.innerHeight;
@@ -27,7 +27,7 @@
 // 	}).addToWorld();
 
 // gooRunner.renderer.context.canvas.clientHeight = window.innerHeight;
-// // })();
+// })();
 
 function CameraFollowScript(target) {
     this.target = target;
