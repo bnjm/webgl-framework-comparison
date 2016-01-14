@@ -1,10 +1,8 @@
-'use strict'
-
-let url = 'https://spreadsheets.google.com/feeds/list/1l0ofIVaT5FjVTpQauAb1FRs2tdyEAMh9IxCgnydm1H4/od6/public/values?alt=json';
-let domEl = document.querySelector('.introduction');
+var url = 'https://spreadsheets.google.com/feeds/list/1l0ofIVaT5FjVTpQauAb1FRs2tdyEAMh9IxCgnydm1H4/od6/public/values?alt=json';
+var domEl = document.querySelector('.introduction');
 
 function loadJSON(path, success, error){
-  let xhr = new XMLHttpRequest();
+  var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function(){
     if (xhr.readyState === XMLHttpRequest.DONE) {
       if (xhr.status === 200){
@@ -31,11 +29,11 @@ loadJSON(url,
 function handleData(d){
   console.dir(d.feed);
   for (var i of d.feed.entry){
-    let row      = document.createElement('tr');
-    let category = document.createElement('td');
-    let goo      = document.createElement('td');
-    let three    = document.createElement('td');
-    let play     = document.createElement('td');
+    var row      = document.createElement('tr');
+    var category = document.createElement('td');
+    var goo      = document.createElement('td');
+    var three    = document.createElement('td');
+    var play     = document.createElement('td');
     category.textContent = i.title.$t;
     goo.textContent      = i.gsx$goo.$t;
     three.textContent    = i['gsx$three.js'].$t;
