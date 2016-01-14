@@ -35,7 +35,7 @@ function handleData(d){
     var three    = document.createElement('td');
     var play     = document.createElement('td');
     category.textContent = i.title.$t;
-    goo.textContent      = i.gsx$goo.$t;
+    goo.textContent      = i.gsx$gooengine.$t;
     three.textContent    = i['gsx$three.js'].$t;
     play.textContent     = i.gsx$playcanvas.$t;
     // category.className = 'title';
@@ -68,3 +68,4 @@ for (var i = 0; i < rows.length; i++){
 function error(x){
   alert('error pulling from google spreadsheet, please refresh');
 }
+
