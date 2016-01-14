@@ -26,7 +26,7 @@
         scene.add( mesh );
 
         renderer = new THREE.WebGLRenderer({});
-        renderer.setClearColor( 0xffffff, 1 ); 
+        renderer.setClearColor( 0xeeeeee, 1 ); 
         renderer.setSize( container.clientWidth, height );
 
         container.appendChild( renderer.domElement );

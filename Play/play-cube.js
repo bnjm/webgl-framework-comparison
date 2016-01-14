@@ -19,7 +19,7 @@
 	// Create camera entity
 	var camera = new pc.Entity();
 	camera.addComponent('camera', {
-	  clearColor: new pc.Color(1, 0.9, 0.9)
+	  clearColor: new pc.Color(0.85, 0.85, 0.85)
 	});
 
 	// Create directional light entity
