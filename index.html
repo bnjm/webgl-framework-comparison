@@ -5,13 +5,20 @@
 	<title>Three.js Overview</title>
 	<link rel="stylesheet" href="./furtive.css">
 	<style>
+		html, body { max-width: 100vw;}
 		body {
 			overflow-x: hidden;
 		}
-		.full {
-			height: 100vh;
+		::selection {
+			color:rgba(255,100,100,0.5);
 		}
-		.three { overflow-y: hidden;}
+		.full {
+			min-height: 100vh;
+			padding: 0;
+		}
+		.full::after {
+			content: '';
+		}
 		p {
 			/*font-weight: 700;*/
 		}
@@ -20,21 +27,25 @@
 			padding:0;
 			float: left;
 			width: calc(100% / 3);
-			height: 100vh;
+			height: calc(100vh - 105px);
 		}
-		#goo-canvas {
-			position: absolute;
-			z-index: 1000;
-			width: calc(100% / 3);
-			height: 100vh;
+		.m::after{
+			content:'';
 		}
+		.three { margin-right: -1px;}
+		@media (max-width: 960px), (max-aspect-ratio: 1/1){
+			.m {
+				width: 100%;
+			} 
+		}
+
 		pre { margin: 0;}
 		code {
 			position: absolute;
-			height: 100%;
-			width: 100%;
+			height: calc(100% - 105px);
+			width: calc(100%/3);
 			font-size: 10px;
-			overflow-y:scroll;
+			overflow-y: hidden;
 		}
 		table {
 			/*display:none;*/
@@ -45,9 +56,12 @@
 			white-space:pre;
 			vertical-align: text-top;
 		}
-		tr:nth-child(odd){
-			background-color: rgba(250,250,250,1);
+		tr {
+			border-bottom: 1px solid rgba(0,0,0,0.2);
 		}
+/*		tr:nth-child(odd){
+			background-color: rgba(250,250,250,1);
+		}*/
 		.white {
 			color: white;
 			background-color: rgba(255,255,255,0.2);
@@ -56,6 +70,15 @@
 			margin-top: -20px;
 			padding-top:0;
 		}
+		.demos {
+			/*display:none;*/
+			overflow:hidden;
+		}
+		.pad {
+			padding: 30px;
+			margin: 0;
+		}
+
 	</style>
 </head>
 <body>
@@ -64,14 +87,14 @@
 			<h1>WebGL Framework Comparison</h1>
 		</header>
 		<h3>1. introduction</h3>
-		<p class="txt--left">This is a brief comparison the WebGL frameworks Three.js, Play Canvas and Goo Engine.
+		<p>This is a brief comparison the WebGL frameworks Three.js, Play Canvas and Goo Engine.
 			Frameworks will be compared with respect to their appropriateness for use in a complex 3d Architectural application.
 		</p>
 	</section>
 	<section class="p2 introduction">
 	<h3 class="txt--center" id="z">2. Overview <br></h3>
 	<br>
-		<table class="titles">
+		<table class="titles" style="table-layout: fixed">
 			<thead>
 				<th></th>
 				<th>Three.js</th>
@@ -79,15 +102,15 @@
 				<th>Play Canvas</th>
 			</thead>
 		</table>
-		<div class="measure">
+		<div class="measure txt--left">
 			<div><br>*As of 14/01/16</div>
 			<div>**Stars added since initially speaking to Tomas on 21/11/15</div>
 			<div>Data dynamically pulled from Google Sheets, if table is not displaying correctly, please view data <a href="https://docs.google.com/spreadsheets/d/1l0ofIVaT5FjVTpQauAb1FRs2tdyEAMh9IxCgnydm1H4/edit?usp=sharing">here</a>
 			</div>
 		</div>
-		<h3 class="txt--center">3. Hello World</h3>
 	</section>
-	<section class="full">
+	<section class="full py2">
+		<h3 class="pad txt--center bg--light-gray">3. Hello World</h3>
 		<section class="goo m">
 			<pre><code class="white">
 	/**	GOO.JS HELLO WORLD	**/
@@ -203,7 +226,8 @@
 			<canvas id="application-canvas"></canvas>
 		</section>	
 	</section>
-	<section class="bg--blue txt--center"><h3 class="txt--center">4. Three.js</h3>
+	<section class="bg--gray txt--center">
+		<h3 class="txt--center pad">4. Three.js</h3>
 		<div class="measure">
 		<p >Three.js one the most successful open source projects of recent years, and by far the most popular WebGL framework in use today. It's seen by many as a victory of the open web, of open standards that came about after years of relying on closed platforms like Adobe Flash.
  		</p> 
@@ -222,7 +246,9 @@
  		<p>Breaking changes do often occur with new releases.</p>
  		</div>
 	</section>
-	<section class=""><h3 class="txt--center">5. Goo.js</h3></section>
+	<section class="bg--light-gray">
+		<div class="measure"><h3 class="txt--center">5. Goo.js</h3></div>
+	</section>
 	<section class="bg--grey"><h3 class="txt--center">6. Play Canvas</h3></section>
 	<section><h3 class="txt--center">7. Conclusion</h3></section>
 	<script src="./sheets.js"></script>

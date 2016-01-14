@@ -3,7 +3,7 @@
     var geometry, material, mesh;
 
     var container = document.querySelector('.three');
-    var height = window.innerHeight;
+    var height = window.innerHeight - 105;
     var aspect = container.clientWidth / height;
 
     init();
@@ -45,8 +45,8 @@
     }
 
     window.addEventListener('resize', function () {
-  renderer.setSize(container.clientWidth, window.innerHeight);
-  camera.aspect = container.clientWidth / window.innerHeight;
+  renderer.setSize(container.clientWidth, (window.innerHeight - 105));
+  camera.aspect = container.clientWidth / (window.innerHeight - 105);
   camera.updateProjectionMatrix();
 });
 })();
