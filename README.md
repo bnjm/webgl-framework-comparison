@@ -13,12 +13,16 @@ The following aspects of each library will be considered.
 
 - Performance
 - Documentation
-- Community
+- Community & Ecosystem
 - API
 - Lighting & Materials
 - Import / Export
 - History & future outlook
 - Philosophy
+
+
+
+
 
 
 

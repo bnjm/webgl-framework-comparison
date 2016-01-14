@@ -3,9 +3,7 @@
 (function(){
 	var parent = document.querySelector('.play');
 	var canvas = document.getElementById("application-canvas");
-	console.log(document.querySelector('.play').clientHeight);
 	var app = new pc.Application(canvas, {});
-	console.log(document.querySelector('.play').clientHeight);
 	app.start();
 
 	// Fill the available space at full resolution
@@ -21,7 +19,7 @@
 	// Create camera entity
 	var camera = new pc.Entity();
 	camera.addComponent('camera', {
-	  clearColor: new pc.Color(0.1, 0.2, 0.3)
+	  clearColor: new pc.Color(1, 0.9, 0.9)
 	});
 
 	// Create directional light entity
@@ -45,5 +43,6 @@
 	window.addEventListener('resize', function () {
 	  app.resizeCanvas(parent.clientWidth, window.innerHeight);
 	});
+
 })();
 

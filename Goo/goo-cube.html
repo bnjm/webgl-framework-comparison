@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Goo Cube</title>
+	<style>
+		#goo {
+		  position: absolute;
+		  left: 0px;
+		  right: 0px;
+		  top: 0px;
+		  bottom: 0px;
+		  width: 100%;
+		  height: 100%;
+		}
+	</style>
+</head>
+<body>
+<script src="http://code.gooengine.com/0.8.1/lib/goo.js"></script>
+<script>
+	var gooRunner = new goo.GooRunner();
+	document.body.appendChild(gooRunner.renderer.domElement);
+	gooRunner.renderer.domElement.id = 'goo';
+	var world = gooRunner.world;
+
+	var camera = new goo.Camera();
+	var camControl = new goo.OrbitCamControlScript({
+		spherical: [10,0,0]
+	});
+
+	var box = new goo.Box();
+	var material = goo.Material.createMaterial(goo.ShaderLib.simpleLit);
+
+	world.createEntity(new goo.PointLight(), [200, 100, 100])
+		.addToWorld();
+
+	world.createEntity(camera, camControl)
+		.addToWorld();
+
+	world.createEntity(box, material, function (entity) {
+	    entity.setRotation(world.time/2, world.time/2, 0);
+	}).addToWorld();
+</script>
+
+</body>
+</html>
