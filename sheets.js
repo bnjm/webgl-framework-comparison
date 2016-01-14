@@ -36,7 +36,7 @@ function handleData(d){
     let goo      = document.createElement('td');
     let three    = document.createElement('td');
     let play     = document.createElement('td');
-    category.textContent = i.title.$t + ':';
+    category.textContent = i.title.$t;
     goo.textContent      = i.gsx$goo.$t;
     three.textContent    = i['gsx$three.js'].$t;
     play.textContent     = i.gsx$playcanvas.$t;

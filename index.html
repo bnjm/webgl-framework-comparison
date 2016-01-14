@@ -12,7 +12,7 @@
 			min-height: 100vh;
 		}
 		p {
-			font-weight: 700;
+			/*font-weight: 700;*/
 		}
 		.m {
 			margin:0;
@@ -44,10 +44,15 @@
 			vertical-align: text-top;
 		}
 		tr:nth-child(odd){
-			background-color: rgba(250,250,250,1);
+			background-color: rgba(252,252,252,1);
 		}
 		.white {
 			color: white;
+			background-color: rgba(255,255,255,0.2);
+		}
+		#z {
+			margin-top: -20px;
+			padding-top:0;
 		}
 	</style>
 </head>
@@ -56,20 +61,14 @@
 		<header class="txt--center">
 			<h1>WebGL Framework Comparison</h1>
 		</header>
-		<h3>introduction</h3>
-<!-- 		<p class="strong">Three.js one the most successful open source projects of recent years, and by far the most popular WebGL framework in use today. It's seen by many as a victory of the open web, of open standards that came about after years of relying on closed platforms like Adobe Flash.
-		</p> 
-	</section>
-	<section class="p2 measure txt--center"> -->
-	<!-- Twitter Media -->
-<!-- 		<div class="txt--center">
-			<blockquote class="twitter-tweet tw-align-center " data-cards="hidden" lang="en"><p lang="en" dir="ltr">Oh my! <a href="https://twitter.com/nvidia">@nvidia</a> contributing to <a href="https://twitter.com/hashtag/threejs?src=hash">#threejs</a>! 😳&#10;<a href="https://t.co/aei2wpdCeK">https://t.co/aei2wpdCeK</a></p>&mdash; Ricardo Cabello (@mrdoob) <a href="https://twitter.com/mrdoob/status/484787309879898112">July 3, 2014</a>
-			</blockquote>
-		</div> -->
-		<!-- WEBGL WON -->
-		<!-- <div class="g-post" data-href="https://plus.google.com/+ricardocabello/posts/JZYnRyBbokQ"></div> -->
+		<h3>1. introduction</h3>
+		<p class="txt--left">This is a brief comparison the WebGL frameworks Three.js, Play Canvas and Goo Engine.
+			Frameworks will be compared with respect to their appropriateness for use in a complex 3d Architectural application.
+		</p>
 	</section>
 	<section class="p2 introduction">
+	<h3 class="txt--center" id="z">2. Overview <br></h3>
+	<br>
 		<table class="titles">
 			<thead>
 				<th></th>
@@ -80,15 +79,15 @@
 		</table>
 		<div class="measure">
 			<div><br>*As of 14/01/16</div>
-			<div>**Added since initially speaking to Tomas on 21/11/15</div>
+			<div>**Stars added since initially speaking to Tomas on 21/11/15</div>
 			<div>Data dynamically pulled from Google Sheets, if table is not displaying correctly, please view data <a href="https://docs.google.com/spreadsheets/d/1l0ofIVaT5FjVTpQauAb1FRs2tdyEAMh9IxCgnydm1H4/edit?usp=sharing">here</a>
 			</div>
 		</div>
-		<h3 class="txt--center">Hello World</h3>
+		<h3 class="txt--center">3. Hello World</h3>
 	</section>
 	<section class="full">
-	<section class="goo m">
-	<pre><code class="white">
+		<section class="goo m">
+			<pre><code class="white">
 	/**	GOO.JS HELLO WORLD	**/
 
 	var gooRunner = new goo.GooRunner();
@@ -114,11 +113,11 @@
 	    entity.setRotation(world.time, world.time, 0);
 	}).addToWorld();
 
-	</code></pre>
-	<iframe src="./Goo/goo-cube.html" width="100%" height="100%" frameborder="0"></iframe>
-	</section>
-	<section class="three m">
-	<pre><code>
+			</code></pre>
+			<iframe src="./Goo/goo-cube.html" width="100%" height="100%" frameborder="0"></iframe>
+		</section>
+		<section class="three m">
+			<pre><code>
 	/**	THREE.JS HELLO WORLD	**/
 
     var scene, camera, renderer;
@@ -161,10 +160,10 @@
         renderer.render( scene, camera );
 
     }
-	</code></pre>	
-	</section>
-	<section class="play m">
-	<pre><code>
+			</code></pre>	
+		</section>
+		<section class="play m">
+			<pre><code>
 	/**	PLAY CANVAS HELLO WORLD	**/
 
 	var parent = document.querySelector('.play');
@@ -198,19 +197,20 @@
 	app.on("update", function (deltaTime) {
 	  cube.rotate(15 * deltaTime, 15 * deltaTime, 15 * deltaTime);
 	});
-	</code></pre>
-	<canvas id="application-canvas"></canvas>
-	</section>	
+				</code></pre>
+			<canvas id="application-canvas"></canvas>
+		</section>	
 	</section>
+	<section class="bg--grey"><h3 class="txt--center">4. Three.js</h3></section>
+	<section class=""><h3 class="txt--center">5. Goo.js</h3></section>
+	<section class="bg--grey"><h3 class="txt--center">6. Play Canvas</h3></section>
+	<section><h3 class="txt--center">7. Conclusion</h3></section>
 	<script src="./index.js"></script>
 	<script src="./sheets.js"></script>
 	<script src="./Play/playcanvas-latest.min.js"></script>
 	<script src="./Three/three.min.js"></script>
 	<script src="./Play/play-cube.js"></script>
 	<script src="./Three/three-cube.js"></script>
-	<section class="full bg--blue"></section>
-	<section class="full bg--red"></section>
-	<section class="full bg--blue"></section>
 	<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 	<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 </body>
