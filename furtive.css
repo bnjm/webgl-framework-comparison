@@ -781,3 +781,96 @@ table th, table td {
   padding: 0.4rem;
   word-wrap: normal;
   line-height: 1; }
+
+  
+    ::selection {
+      color:rgba(255,100,100,0.5);
+    }
+
+    .full {
+      min-height: 100vh;
+      padding: 0;
+    }
+
+    .m {
+      margin:0;
+      padding:0;
+      float: left;
+      width: calc(100% / 3);
+      height: calc(100vh - 105px);
+    }
+
+    .three { margin-right: -1px;}
+
+    pre { margin: 0;}
+
+    code {
+      position: absolute;
+      height: calc(100vh - 105px);
+      width: calc(100vw/3);
+      font-size: 10px;
+      overflow-y: hidden;
+    }
+    table {
+      width: 100%;
+      word-wrap:break-word;
+    }
+
+    td {
+      white-space:pre;
+      vertical-align: text-top;
+      overflow: hidden;
+    }
+
+    tr {
+      border-bottom: 1px solid rgba(0,0,0,0.2);
+    }
+
+    .white {
+      color: white;
+      background-color: rgba(255,255,255,0.2);
+    }
+
+    #z {
+      margin-top: -20px;
+      padding-top:0;
+    }
+
+    .pad {
+      padding: 15px 30px;
+      margin: 0;
+    }
+    .top {
+      margin-top: 30px;
+    }
+    .left {
+      width: 50%;
+      float: left;
+    }
+    .mv--up {
+      margin-top: -20px;
+    }
+/*    .mv--left-far {
+      margin-left: -250px;
+    }
+    .mv--right-far {
+      margin-right: -250px;
+    }*/
+
+    @media (max-width: 960px), (max-aspect-ratio: 1/1){
+      .m {
+        width: 100%;
+      } 
+      code {
+        width: 100%;
+      }
+      .mv--left-far, .mv--left, .mv--right-far {
+        display:block;
+        margin:auto;
+        position: relative;
+        float:none;
+      }
+      h3 {
+        margin-top: 30px  ;
+      }
+    }

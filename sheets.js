@@ -49,7 +49,7 @@ function handleData(d){
   }
   var rows = document.querySelectorAll('td');
   for (var i = 0; i < rows.length; i++){
-  rows[i].innerHTML = urlify(rows[i].textContent);
+    rows[i].innerHTML = urlify(rows[i].textContent);
 }
 
 }
@@ -66,6 +66,6 @@ for (var i = 0; i < rows.length; i++){
 }
 
 function error(x){
-  alert('error pulling from google spreadsheet, please refresh');
+  console.log('error pulling from google spreadsheet, please refresh');
 }
 
