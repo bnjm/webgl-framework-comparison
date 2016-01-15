@@ -11,7 +11,7 @@
 			<h1>WebGL Framework Comparison</h1>
 		</header>
 		<h3>1. overview</h3>
-		<p>This is a brief comparison the WebGL frameworks Three.js, Play Canvas and Goo Engine.
+		<p class="txt--left">This is a brief comparison of the WebGL frameworks Three.js, Play Canvas and Goo Engine.
 			<br>
 			Frameworks will be compared with respect to their appropriateness for use in a complex 3d architectural application.
 		</p>
@@ -38,7 +38,7 @@
 		<h3 class="pad left">Spinning Cube</h3>
 		<section class="goo m">
 			<pre><code class="white">
-	/**	GOO.JS HELLO WORLD	**/
+	/**	GOO ENGINE HELLO WORLD	**/
 
 	var gooRunner = new goo.GooRunner();
 	document.body.appendChild(gooRunner.renderer.domElement);
@@ -118,7 +118,7 @@
 		</section>
 		<section class="play m">
 			<pre><code>
-	/**	PLAY CANVAS HELLO WORLD	**/
+	/**	PLAYCANVAS HELLO WORLD	**/
 
 	var parent = document.querySelector('.play');
 	var canvas = document.getElementById("application-canvas");
@@ -222,7 +222,7 @@
 			</ul>
 			Weaknesses
 			<ul>
-				<li>The API is more declarative than the other two, which would be good if the documentation / API was better. Though the hello world example had the fewest lines of code, it took hours of looking through the docs just to figure out how to make basic changes to the viewport size / color</li>
+				<li>The API is more declarative than the other two, which would be good if the documentation / API was better. Though the Goo Engine hello world example had the fewest lines of code, it took hours of looking through the docs just to figure out how to make basic changes to the viewport size / color</li>
 				<li>User friendly features have come at the cost of extensibility, suits a certain type of project (i.e. game / experience, but not necessarily an Architectural application)</li>
 				<li>Doesn't make sense to use independent of Goo Create, which is great, but proprietry + not free</li>
 			</ul>
@@ -233,9 +233,9 @@
 		</div>
 	</section>
 	<section class="bg--grey p2">		
-		<div class="measure txt--left"><h3 class="txt--center pad">5. Play Canvas</h3>
+		<div class="measure txt--left"><h3 class="txt--center pad">5. PlayCanvas</h3>
 			<p>
-				Play Canvas is a graphics library that has been built primarily for gaming, however the focus has shifted to include archviz and other commercial applications. 
+				PlayCanvas is a graphics library that has been built primarily for gaming, however the focus has shifted to include archviz and other commercial applications. 
 				Like Goo, it provides keyboard events and physics out of the box, however the API feels a lot easier to navigate. 
 			</p>
 			<div class="txt--center">
@@ -243,16 +243,16 @@
 			</div>
 			<div>Strengths
 			<ul>
-				<li>Networking / Multi user capabilities if using Playcanvas platform</li>
+				<li>Networking / Multi user capabilities if using PlayCanvas platform to distribute / build app</li>
 				<li>Excellent documentation + tutorial resources</li>
 				<li>Built in Keyboard + Mouse Events, rigid body physics</li>
 				<li>Developers working professionally on the engine</li>
 			</ul>
 			Weaknesses
 			<ul>
-				<li>Suits creation of one experiences rather than the creation of a platform</li>
-				<li>User friendly features have come at the cost of extensibility, suits a certain type of project (i.e. game / experience, but not necessarily an Architectural application)</li>
-				<li>Doesn't make sense to use independent of Goo Create, which is great, but proprietry + not free</li>
+				<li>Suits creation of one-off experiences rather than the creation of a platform</li>
+				<li>Editor is proprietry</li>
+				<li>Community is good, but mostly focused on using the editor</li>
 			</ul>
 			</div><br><br>
 		</div>
@@ -263,10 +263,10 @@
 	<section class="txt--left p2 bg--light-gray"><h3 class="txt--center pad">6. Discussion</h3>
 		<div class="measure">
 		<p>
-			As all three frameworks are JS libraries that sit on top of WebGL, you can achieve the same things with any of them, with enough effort. It's hard to compare performance, but if the GPU is rendering the same shaders, number of triangles per-frame, and keeping the same textures in memory, the performance discrepency should be minimal. It makes sense then to choose a framework that aligns well with your philosophy, workflow and project intentions. 
+			As all three frameworks are JS libraries that sit on top of WebGL, you can achieve the same things with any of them, with enough effort. It's hard to compare performance without thorough testing, but if the GPU is rendering the same shaders, number of triangles per-frame, and keeping the same textures in memory, the performance discrepency should be minimal. It makes sense then to choose a framework that aligns well with your philosophy, workflow and project intentions. 
 		</p>
 		<p>
-			Because of Playcanvas's recent focus on arch-viz it would seem like a good choice for an architectural application. However, as Playcanvas as a product is heavily focused and invested in its editor, it doesn't make sense to use the engine without the editor, when there are single focus solutions available. Both the editor and engine will be influenced by each other as the product develops. With regards to arch-viz, Playcanvas seems more suited to the creation of one-off arch-viz experiences, rather than the creation of a system for them.
+			Because of PlayCanvas's recent focus on arch-viz it would seem like a good choice for an architectural application. However, as PlayCanvas as a product is heavily focused and invested in its editor, it doesn't make sense to use the engine without the editor, when there are single focus solutions available. Both the editor and engine will be influenced by each other as the product develops. With regards to arch-viz, PlayCanvas seems more suited to the creation of one-off arch-viz experiences, rather than the creation of a system for them.
 		</p>
 		<p>
 			Goo Engine's main strength is also in its editor. One consideration regarding this is that that puts it in competition with other editors like Unity, and Unreal - who have WebGL exporters, and will possibly the first to utilise new technologies like emscripten and WebAssembly. Goo's declarative approach could be a very real positive, but the API, or at least the documentation, needs some tweaks to lower the barrier to entry.
@@ -280,7 +280,7 @@
 				<i>Screenshot from Autodesk Dynamo Editor, running Three.js</i>
 			</div>
 		<p>
-			All three are fantastic in their own way, it's great to have choices, and great that open source software can be so successful.
+			All three are fantastic in their own way, it's great to have choices, and great that open source software can be so successful. 
 		</p>
 		</div>
 	</section>
