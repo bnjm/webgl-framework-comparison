@@ -6,24 +6,22 @@
 	<link rel="stylesheet" href="./furtive.css">
 </head>
 <body>
+	<!-- 1. Overview -->
 	<section class="py2 txt--center measure">
-		<header class="txt--center">
-			<h1>WebGL Framework Comparison</h1>
-		</header>
+		<h1>WebGL Framework Comparison</h1>
 		<h3>1. overview</h3>
-		<p class="txt--left">This is a brief comparison of the WebGL frameworks Three.js, Play Canvas and Goo Engine.
+		<p>This is a brief comparison of the WebGL frameworks; Three.js, Play Canvas and Goo Engine.
 			<br>
 			Frameworks will be compared with respect to their appropriateness for use in a complex 3d architectural application.
 		</p>
 	</section>
 	<section class="p2 introduction">
-	<br>
 		<table class="titles" style="table-layout: fixed">
 			<thead>
 				<th></th>
 				<th>Three.js</th>
 				<th>Goo Engine</th>
-				<th>Play Canvas</th>
+				<th>PlayCanvas</th>
 			</thead>
 		</table>
 		<div class="measure">
@@ -33,9 +31,10 @@
 			</div>
 		</div>
 	</section>
-	<section class="full py2">
+	<!-- 2. Hello World -->
+	<section class="full p2">
 		<h3 class="pad left txt--right bg--light-gray">2. Hello World</h3>
-		<h3 class="pad left">Spinning Cube</h3>
+		<h3 class="pad left bg--mid-gray">Spinning Cubes</h3>
 		<section class="goo m">
 			<pre><code class="white">
 	/**	GOO ENGINE HELLO WORLD	**/
@@ -151,17 +150,18 @@
 	app.on("update", function (deltaTime) {
 	  cube.rotate(15 * deltaTime, 15 * deltaTime, 15 * deltaTime);
 	});
-				</code></pre>
+			</code></pre>
 			<canvas id="application-canvas"></canvas>
 		</section>	
 	</section>
+	<!-- 3. Three.js -->
 	<section class="measure bg--gray txt--center p2">
 		<h3 class="mv--up">3. Three.js</h3>
 		<div class="measure">
 		<p class="txt--left">Three.js one the most successful open source projects of recent years, and by far the most popular WebGL framework in use today. It's seen by many as a victory of the open web, of open standards that came about after years of relying on closed platforms like Adobe Flash.
  		</p> 
 		<!-- WEBGL WON -->
-		<div class="flt--right mv--right-far pad">
+		<div class="flt--right pad">
  		<div class="g-post" data-href="https://plus.google.com/+ricardocabello/posts/JZYnRyBbokQ"></div>
  		</div>
  		<p class="txt--left">Of the three frameworks being compared, Three.js is the only one without explicit commercial sponsorship. As the project grows older, incentivising developers to maintain it could be seen as an issue. However, the number of commercial apps and demos that rely on the library (Google, Apple, Autodesk, Vizor) mean that it will be maintained rigorously for the near future. As WebGL and the browser landscape are rapidly evolving, this is an important consideration. Any framework you choose will need to adapt to the coming changes of WebVR + WebGL 2.0, while maintaining a stable and consistent API. 
@@ -188,6 +188,7 @@
 		</div><br><br>
  		</div>
 	</section>
+	<!-- 4. Goo Engine -->
 	<section class="bg--light-gray p2">
 		<div class="measure txt--left"><h3 class="txt--center pad">4. Goo Engine</h3>
 			<p>
@@ -232,6 +233,7 @@
 			
 		</div>
 	</section>
+	<!-- 5. PlayCanvas -->
 	<section class="bg--grey p2">		
 		<div class="measure txt--left"><h3 class="txt--center pad">5. PlayCanvas</h3>
 			<p>
@@ -260,13 +262,14 @@
 			
 		</div>
 	</section>
+	<!-- 6. Discussion -->
 	<section class="txt--left p2 bg--light-gray"><h3 class="txt--center pad">6. Discussion</h3>
 		<div class="measure">
 		<p>
-			As all three frameworks are JS libraries that sit on top of WebGL, you can achieve the same things with any of them, with enough effort. It's hard to compare performance without thorough testing, but if the GPU is rendering the same shaders, number of triangles per-frame, and keeping the same textures in memory, the performance discrepency should be minimal. It makes sense then to choose a framework that aligns well with your philosophy, workflow and project intentions. 
+			As all three frameworks are JS libraries that sit on top of WebGL, you can achieve the same things with any of them, with enough effort. It's hard to compare performance without thorough testing, but if the GPU is rendering the same shaders, number of triangles per-frame, and keeping the same textures in memory, the performance across frameworks should be similar. It makes sense then to choose a framework that aligns well with your philosophy, workflow and project intentions. 
 		</p>
 		<p>
-			Because of PlayCanvas's recent focus on arch-viz it would seem like a good choice for an architectural application. However, as PlayCanvas as a product is heavily focused and invested in its editor, it doesn't make sense to use the engine without the editor, when there are single focus solutions available. Both the editor and engine will be influenced by each other as the product develops. With regards to arch-viz, PlayCanvas seems more suited to the creation of one-off arch-viz experiences, rather than the creation of a system for them.
+			Because of PlayCanvas's recent focus on archviz it would seem like a good choice for an architectural application. However, as PlayCanvas as a product is heavily focused and invested in its editor, it doesn't make sense to use the engine without the editor, when there are single focus solutions available. Both the editor and engine will be influenced by each other as the product develops. With regards to archviz, PlayCanvas seems more suited to the creation of one-off archviz experiences, rather than the creation of a system for them.
 		</p>
 		<p>
 			Goo Engine's main strength is also in its editor. One consideration regarding this is that that puts it in competition with other editors like Unity, and Unreal - who have WebGL exporters, and will possibly the first to utilise new technologies like emscripten and WebAssembly. Goo's declarative approach could be a very real positive, but the API, or at least the documentation, needs some tweaks to lower the barrier to entry.
