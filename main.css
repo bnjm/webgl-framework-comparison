@@ -788,16 +788,17 @@ table th, table td {
     }
 
     .full {
-      min-height: 100vh;
+      height: 100vh;
       padding: 0;
     }
+
 
     .m {
       margin:0;
       padding:0;
       float: left;
       width: calc(100% / 3);
-      height: calc(100vh - 105px);
+      height: calc(100vh - 75px);
     }
 
     .three { margin-right: -1px;}
@@ -806,7 +807,7 @@ table th, table td {
 
     code {
       position: absolute;
-      height: calc(100vh - 105px);
+      height: calc(100vh - 75px);
       width: calc(100vw/3);
       font-size: 10px;
       overflow-y: hidden;
@@ -850,27 +851,20 @@ table th, table td {
     .mv--up {
       margin-top: -20px;
     }
-/*    .mv--left-far {
-      margin-left: -250px;
-    }
-    .mv--right-far {
-      margin-right: -250px;
-    }*/
 
     @media (max-width: 960px), (max-aspect-ratio: 1/1){
       .m {
         width: 100%;
+        display:block;
       } 
       code {
         width: 100%;
+        display: block;
       }
       .mv--left-far, .mv--left, .mv--right-far {
         display:block;
         margin:auto;
         position: relative;
         float:none;
-      }
-      h3 {
-        margin-top: 30px  ;
       }
     }

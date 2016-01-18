@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>WebGL framework comparison</title>
-	<link rel="stylesheet" href="./furtive.css">
+	<link rel="stylesheet" href="./main.css">
 </head>
 <body>
 	<!-- 1. Overview -->
@@ -156,15 +156,17 @@
 	</section>
 	<!-- 3. Three.js -->
 	<section class="measure bg--gray txt--center p2">
-		<h3 class="mv--up">3. Three.js</h3>
-		<div class="measure">
-		<p class="txt--left">Three.js is one the most successful open source projects of recent years, and by far the most popular WebGL framework in use today. It's seen by many as a victory of the open web, and of open standards that came about after years of relying on closed platforms like Adobe Flash.
+		<div class="measure txt--left">
+		<h3 class="txt--center pad">3. Three.js</h3>
+		<p>
+			Three.js is one the most successful open source projects of recent years, and by far the most popular WebGL framework in use today. It's seen by many as a victory of the open web, and of open standards that came about after years of relying on closed platforms like Adobe Flash.
  		</p> 
 		<!-- WEBGL WON -->
 		<div class="flt--right pad" style="padding-right: 0">
  		<div class="g-post" data-href="https://plus.google.com/+ricardocabello/posts/JZYnRyBbokQ"></div>
  		</div>
- 		<p class="txt--left">Of the three frameworks being compared, Three.js is the only one without explicit commercial sponsorship. As the project grows older, incentivising developers to maintain it could be seen as an issue. However, the number of commercial apps and demos that rely on the library (Google, Apple, Autodesk, Vizor) mean that it will be maintained rigorously for the near future. As WebGL and the browser landscape are rapidly evolving, this is an important consideration. Any framework you choose will need to adapt to the coming changes of WebVR + WebGL 2.0, while maintaining a stable and consistent API. 
+ 		<p class="txt--left">
+ 			Of the three frameworks being compared, Three.js is the only one without explicit commercial sponsorship. As the project grows older, incentivising developers to maintain it could be seen as an issue. However, the number of commercial apps and demos that rely on the library (Google, Apple, Autodesk, Vizor) mean that it will be maintained rigorously for the near future. As WebGL and the browser landscape are rapidly evolving, this is an important consideration. Any framework you choose will need to adapt to the coming changes of WebVR + WebGL 2.0, while maintaining a stable and consistent API. 
  		</p>
  		 <!-- Twitter Media -->
  		<div class="flt--left pad txt--center" style="padding-left: 0">
@@ -173,7 +175,8 @@
  		</div>
  		 <p class="txt--left">Aside from its community and adoption, Three.js's strength is in its feature set and extensibility. Though plenty of utilities and helpers exist (for example a webVR renderer, ray tracing demos, first person controls etc), the core library excludes features such as keyboard + mouse events and physics. This makes it less appropriate for hobbyist game creators and people needing a quick set up, but appropriate for a general purpose graphics library. 
  		</p>
-		<div class="txt--left">Strengths
+		<div class="txt--left">
+			Strengths
 			<ul>
 				<li>Large community and ecosystem</li>
 				<li>Very customisable, makes sense for a variety of non-gaming applications</li>
@@ -191,7 +194,8 @@
 	</section>
 	<!-- 4. Goo Engine -->
 	<section class="bg--light-gray p2">
-		<div class="measure txt--left"><h3 class="txt--center pad">4. Goo Engine</h3>
+		<div class="measure txt--left">
+			<h3 class="txt--center pad">4. Goo Engine</h3>
 			<p>
 				Goo Engine is the open source WebGL library that powers Goo Create, a browser based GUI designed to allow you to create interactive scenes without coding.
 				Goo is the newest framework of the three, and only became open source in November 2015.
@@ -204,10 +208,11 @@
 					<i>drama!</i>
 			</div>
 	
-			<p> If it started as a fork, a lot of work has been done since then. An overview of the changes are that many of the features from Three.js have been stripped out, multiple renderers, material types, loaders and primitives, and in their place are single generic primitives. Added to the framework are mouse and keyboard helpers, as well as a physics engine, cannon.js. These design decisions are in line with the goal of making the framework as accessible as possible for people to create games and experiences, and minimising the amount of code that needs to be written.
+			<p>
+				If it started as a fork, a lot of work has been done since then. An overview of the changes are that many of the features from Three.js have been stripped out, multiple renderers, material types, loaders and primitives, and in their place are single generic primitives. Added to the framework are mouse and keyboard helpers, as well as a physics engine, cannon.js. These design decisions are in line with the goal of making the framework as accessible as possible for people to create games and experiences, and minimising the amount of code that needs to be written.
 			</p>
 			<p>
-			Goo Engine has been built with the purpose of tight integration with its online GUI editor, Goo Create. It does what it sets out to very well, and its ease of use has attracted a talented community who have used the engine & Goo Create to make some of the best WebGL demos on the internet.
+				Goo Engine has been built with the purpose of tight integration with its online GUI editor, Goo Create. It does what it sets out to very well, and its ease of use has attracted a talented community who have used the engine & Goo Create to make some of the best WebGL demos on the internet.
 			</p>
 			<div class="txt--center">
 				<img src="./img/PearlBoy.png" alt=""/><br>
@@ -236,7 +241,8 @@
 	</section>
 	<!-- 5. PlayCanvas -->
 	<section class="bg--grey p2">		
-		<div class="measure txt--left"><h3 class="txt--center pad">5. PlayCanvas</h3>
+		<div class="measure txt--left">
+			<h3 class="txt--center pad">5. PlayCanvas</h3>
 			<p>
 				PlayCanvas is a graphics library that has been built primarily for gaming, however the focus has shifted to include archviz and other commercial applications. 
 				Like Goo, it provides keyboard events and physics out of the box, however the API feels a lot easier to navigate, and customising the hello world example was simple.
@@ -244,7 +250,8 @@
 			<div class="txt--center">
 			<img src="./img/play.jpg" alt=""/><br>
 			</div>
-			<p>A big difference between Goo Engine and PlayCanvas is that the engine contains wrappers around the browsers native HTTP and WebSockets API. Several of the demos on the PlayCanvas homepage are multiplayer experience, and work reliably. Tanx is one example, it has been played nearly 2 million times making it one of the most popular WebGL games on the internet.</p>
+			<p>
+				A big difference between Goo Engine and PlayCanvas is that the engine contains wrappers around the browsers native HTTP and WebSockets API. Several of the demos on the PlayCanvas homepage are multiplayer experience, and work reliably. Tanx is one example, it has been played nearly 2 million times making it one of the most popular WebGL games on the internet.</p>
 			<div>Strengths
 			<ul>
 				<li>Networking / Multi user capabilities if using PlayCanvas platform to distribute / build app</li>
@@ -265,7 +272,8 @@
 		</div>
 	</section>
 	<!-- 6. Discussion -->
-	<section class="txt--left p2 bg--light-gray"><h3 class="txt--center pad">6. Discussion</h3>
+	<section class="txt--left p2 bg--light-gray">
+		<h3 class="txt--center pad">6. Discussion</h3>
 		<div class="measure">
 		<p>
 			As all three frameworks are JS libraries that sit on top of WebGL, you can achieve the same things with any of them, with enough effort. It's hard to compare performance without thorough testing, but if the GPU is rendering the same shaders, number of triangles per-frame, and keeping the same textures in memory, the performance across frameworks should be similar. It makes sense then to choose a framework that aligns well with your philosophy, workflow and project intentions. 
@@ -285,14 +293,15 @@
 				<img src="./img/autodesk.jpg" alt=""/><br>
 				<i>Screenshot from Autodesk Dynamo Editor, running Three.js</i>
 			</div>
-		<p>The scope of this comparison is limited, as a proper comparison would require deeper usage of each framework. As such, several generalisations and assumptions have been made which may be unfair. Pushing the comparison further could involve prototyping a simple app in each of the frameworks. This would be the best way to learn the design patterns each framework encourages, and the strengths and weaknesses that their different approaches bring.
+		<p>
+			The scope of this comparison is limited, as a proper comparison would require deeper usage of each framework. As such, several generalisations and assumptions have been made which may be unfair. Pushing the comparison further could involve prototyping a simple app in each of the frameworks. This would be the best way to learn the design patterns each framework encourages, and the strengths and weaknesses that their different approaches bring.
 		</p>
 		<p>
 			All three are fantastic in their own way, it's great to have choices, and great that open source software can be so successful. 
 		</p>
 		</div>
 	</section>
-	<script src="./sheets.js"></script>
+	<script src="./main.js"></script>
 	<script src="./Play/playcanvas-latest.min.js"></script>
 	<script src="./Three/three.min.js"></script>
 	<script src="./Play/play-cube.js"></script>

@@ -41,7 +41,7 @@
 	});
 
 	window.addEventListener('resize', function () {
-	  app.resizeCanvas(parent.clientWidth, window.innerHeight-105);
+	  app.resizeCanvas(parent.clientWidth, window.innerHeight-75);
 	});
 
 })();
