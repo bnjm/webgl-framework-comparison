@@ -1,4 +1,8 @@
 # WebGL-framework-comparison
+
+## WARNING: NOT UP-TO-DATE
+_This was an interactive article written for a project comparing the suitability of webgl frameworks for an architectural tool. It is out-of-date and was not meant to serve as a general purpose comparison._
+
 A comparison between the frameworks Goo Engine, Three.js and Play Canvas
 
 The purpose of this comparison is to compare the core engines of the WebGL libraries: Three.js, Play Canvas and Goo Engine.
